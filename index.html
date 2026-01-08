@@ -1,108 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Twitter</title>
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-   <!--sidebar starts-->
-   <div class="sidebar">
-      <i class="fab fa-twitter"></i>
-     
-      <div class="sidebarOption active">
-         <span class="material-symbols-outlined">home</span>
-         <h2>Home</h2>
-      </div>
 
-       <div class="sidebarOption">
-        <span class="material-symbols-outlined">search</span>
-         <h2>Explore</h2>
-      </div>
+    <div class="sidebar">
+        <i class="fab fa-twitter"></i>
+        <div class="sidebarOption active">
+            <span class="material-symbols-outlined">home</span>
+            <h2>Home</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-symbols-outlined">search</span>
+            <h2>Explore</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-symbols-outlined">notifications</span>
+            <h2>Notifications</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-symbols-outlined">mail</span>
+            <h2>Messages</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-symbols-outlined">bookmark</span>
+            <h2>Bookmarks</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-symbols-outlined">list_alt</span>
+            <h2>Lists</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-symbols-outlined">person</span>
+            <h2>Profile</h2>
+        </div>
+        <div class="sidebarOption">
+            <span class="material-symbols-outlined">more_horiz</span>
+            <h2>More</h2>
+        </div>
+        <button class="sidebar__tweet">Tweet</button>
 
-       <div class="sidebarOption">
-       <span class="material-symbols-outlined">notifications</span>
-         <h2>Notification</h2>
-      </div>
-
-       <div class="sidebarOption">
-       <span class="material-symbols-outlined">mail</span>
-         <h2>Messages</h2>
-      </div>
-
-       <div class="sidebarOption">
-      <span class="material-symbols-outlined">bookmark</span>
-         <h2>Bookmarks</h2>
-      </div>
-
-       <div class="sidebarOption">
-         <span class="material-symbols-outlined">lists</span>
-         <h2>Lists</h2>
-      </div>
-
-       <div class="sidebarOption">
-         <span class="material-symbols-outlined">person</span>
-         <h2>Profile</h2>
-      </div>
-
-     
-       <div class="sidebarOption">
-        <span class="material-symbols-outlined">more_horiz</span> 
-         <h2>More</h2>
-      </div>
-      
-      <button class="sidebar-tweet">Tweet</button>
-
-   </div>
-   <!--sidebar ends-->
-
-   <!--feed starts-->
-   <div class="feed">
-      <div class="feed_header">
-         <H2>Home</H2>
-      </div>
-
-      <!--tweetbox starts-->
-      <div class="tweetbox">
-         <form>
-            <div class="tweetbox_input">
-               <img src="./profile.png" alt="">
-               <input type="text" placeholder="What's happening?">
+        <div class="sidebar__profile">
+            <img src="./profile.png" alt="avatar">
+            <div class="sidebar__profileInfo">
+                <h4>Neoentle Masemola</h4>
+                <p>@MrMasemola</p>
             </div>
-            <button class="tweetbox_tweetButton">Tweet</button>
-         </form>
-      </div>
-      <!--tweetbox ends-->
+            <span class="material-symbols-outlined">more_horiz</span>
+        </div>
+    </div>
 
-      <!--post starts-->
-      <div class="post">
-         <div class="post_avatar">
-            <img src="/profile.png" alt="">
-         </div>
+    <div class="feed">
+        <div class="feed__header">
+            <h2>Home</h2>
+            <span class="material-symbols-outlined">auto_awesome</span>
+        </div>
 
-         <div class="post_body">
-            <div class="post_header">
-               <div class="post_headerText">
-                  <h3>Neoentle Masemola
-                     <span class="post_headerSpecial">
-                      <span class="material-symbols-outlined post_badge">verified</span>@MrMasemola
-                     </span>
-                  </h3>
-               </div>
-               <div class="post_headerDescripition">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. dolore earum tempora id et animi?</p>
-               </div>
+        <div class="tweetBox">
+            <form>
+                <div class="tweetbox__input">
+                    <img src="./profile.png" alt="profile">
+                    <input type="text" placeholder="What's happening?">
+                </div>
+                <div class="tweetbox__footer">
+                    <div class="tweetbox__icons">
+                        <span class="material-symbols-outlined">image</span>
+                        <span class="material-symbols-outlined">gif_box</span>
+                        <span class="material-symbols-outlined">poll</span>
+                        <span class="material-symbols-outlined">sentiment_satisfied</span>
+                    </div>
+                    <button class="tweetBox__tweetButton">Tweet</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="post">
+            <div class="post__avatar"><img src="./profile.png" alt=""></div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText">
+                        <h3>Neoentle Masemola <span class="post__headerSpecial"><span class="material-symbols-outlined post__badge">verified</span>@MrMasemola</span></h3>
+                    </div>
+                    <div class="post__headerDescription"><p>This is the first post! Working on the scrolling feature.</p></div>
+                </div>
+                <div class="post__footer">
+                    <span class="material-symbols-outlined">chat_bubble_outline</span>
+                    <span class="material-symbols-outlined">repeat</span>
+                    <span class="material-symbols-outlined">favorite_border</span>
+                    <span class="material-symbols-outlined">publish</span>
+                </div>
             </div>
-         </div>
-         
-         <img src="/post image.jpg" alt="">
-     
-      </div>
-      <!--post ends-->
-   </div>
-   <!--feed ends-->
+        </div>
+
+        <div class="post">
+            <div class="post__avatar"><img src="./profile.png" alt=""></div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText"><h3>Zaio <span class="post__headerSpecial">@ZaioCode</span></h3></div>
+                    <div class="post__headerDescription"><p>Great job on the Twitter clone! Keep pushing code. #coding #zaio</p></div>
+                </div>
+                <div class="post__footer">
+                    <span class="material-symbols-outlined">chat_bubble_outline</span>
+                    <span class="material-symbols-outlined">repeat</span>
+                    <span class="material-symbols-outlined">favorite_border</span>
+                    <span class="material-symbols-outlined">publish</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post__avatar"><img src="./profile.png" alt=""></div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText"><h3>Tech News <span class="post__headerSpecial">@TechNews</span></h3></div>
+                    <div class="post__headerDescription"><p>Check out the new CSS Grid and Flexbox features! Perfect for building clones like this.</p></div>
+                </div>
+                <div class="post__footer">
+                    <span class="material-symbols-outlined">chat_bubble_outline</span>
+                    <span class="material-symbols-outlined">repeat</span>
+                    <span class="material-symbols-outlined">favorite_border</span>
+                    <span class="material-symbols-outlined">publish</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="widgets">
+        <div class="widgets__input">
+            <span class="material-symbols-outlined widgets__searchIcon">search</span>
+            <input type="text" placeholder="Search Twitter">
+        </div>
+
+        <div class="widgets__widgetContainer">
+            <h2>Who to follow</h2>
+            <div class="follow__suggestion">
+                <img src="./profile.png" alt="">
+                <div class="follow__details">
+                    <h4>Elon Musk</h4>
+                    <p>@elonmusk</p>
+                </div>
+                <button class="follow__button">Follow</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -1,147 +1,146 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    --twitter-color:#50b7f5;
-    --twitter-background: #e6ecf0;
-}
-
-.sidebarOption{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.sidebarOption, .material-icons, .fa-twitter{
-    padding: 20px;
-}
-
-.sidebarOption h2{
-    font-weight: 800;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.sidebarOption:hover{
-    background-color: var(--twitter-background);
-    border-radius: 30px;
-    color: var(--twitter-color);
-    transition: color 100ms ease-out;
-}
-
-.sidebarOption.active{
-    color: var(--twitter-color);
-}
-
-.sidebar-tweet{
-    width: 100%;
-    background-color: var(--twitter-color);
-    border: none;
-    border: none;
-    color: white;
-    font-weight: 900;
-    border-radius: 30px;
-    height: 50px;
-    margin-top: 20px;
-}
-
-body{
+body {
     display: flex;
     height: 100vh;
     max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 10px;
+    margin: 0 auto;
+    overflow: hidden; /* Task: Sidebar fixed, body doesn't scroll */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.sidebar{
-    border-right: 1px solid var(--twitter-background);
+/* SIDEBAR - LEFT COLUMN */
+.sidebar {
     flex: 0.2;
     min-width: 250px;
-    margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.fa-twitter{
-    color: var(--twitter-color);
-    font-size: 30px;
-}
-
-/* feed */
-
-.feed{
-    flex: 0.5;
-    border-right: 1px solid var(--twitter-background);
-    min-width: fit-content;
-    overflow-y: scroll;
-}
-
-.feed_header{
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 100;
-    border: 1px solid var(--twitter-background);
-    padding: 15px 20px;
-}
-
-.feed_header h2{
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.feed::-webkit-scrollbar{
-    display: none;
-}
-
-.feed{
-    -ms-overflow-style:none;
-    scrollbar-width: none;
-}
-
-/* tweetbox */
-
-.tweetbo_input img{
-    border-radius: 50%;
-    height: 40px;
-}
-
-.tweetbox{
-    padding-bottom: 10px;
-    border-bottom: 8px solid var(--twitter-background);
-    padding-right: 10px;
-}
-
-.tweetbox form{
+    border-right: 1px solid #e6ecf0;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
 }
 
-.tweetbox_input{
+.fa-twitter { color: #1da1f2; font-size: 30px; padding: 10px; }
+
+.sidebarOption {
     display: flex;
-    padding: 20px;
-}
-
-.tweetbox_input input{
-    flex: 1;
-    margin-left: 20px;
-    font-size: 20px;
-    border: none;
-    outline: none;
-}
-
-.tweetbox_tweetButton{
-    background-color: var(--twitter-color);
-    border: none;
-    color: white;
-    font-weight: 900;
+    align-items: center;
+    cursor: pointer;
     border-radius: 30px;
-    width: 80px;
-    height: 40px;
-    margin-top: 20px;
-    margin-left: auto;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.sidebarOption:hover { background-color: #e8f5fe; color: #1da1f2; }
+
+.sidebarOption h2 { font-weight: 800; font-size: 20px; margin-left: 20px; }
+
+.sidebar__tweet { width: 100%; background-color: #1da1f2; border: none; color: white; font-weight: 900; border-radius: 30px; height: 50px; margin-top: 20px; cursor: pointer; }
+
+.sidebar__profile { display: flex; align-items: center; margin-top: auto; padding: 10px; border-radius: 30px; cursor: pointer; }
+.sidebar__profile:hover { background-color: #e8f5fe; }
+.sidebar__profile img { height: 40px; border-radius: 50%; }
+.sidebar__profileInfo { flex: 1; margin-left: 10px; }
+
+/* FEED - MIDDLE COLUMN */
+.feed {
+    flex: 0.5;
+    border-right: 1px solid #e6ecf0;
+    overflow-y: scroll; /* Task: Make section scrollable */
+    scrollbar-width: none;
+}
+.feed::-webkit-scrollbar { display: none; }
+
+.feed__header {
+    position: sticky; /* Task: Title stays fixed at top */
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6ecf0;
+}
+
+.tweetBox { padding: 10px 20px; border-bottom: 8px solid #e6ecf0; }
+.tweetbox__input { display: flex; padding: 20px 0; }
+.tweetbox__input img { height: 40px; border-radius: 50%; }
+.tweetbox__input input { flex: 1; margin-left: 20px; font-size: 20px; border: none; outline: none; }
+.tweetBox__tweetButton { background-color: #1da1f2; border: none; color: white; font-weight: 900; border-radius: 30px; padding: 10px 20px; cursor: pointer; float: right; }
+
+.post { display: flex; padding: 15px; border-bottom: 1px solid #e6ecf0; cursor: pointer; }
+.post:hover { background-color: #f7f7f7; }
+.post__avatar img { height: 40px; border-radius: 50%; }
+.post__body { flex: 1; padding-left: 10px; }
+.post__badge { font-size: 14px !important; color: #1da1f2; }
+.post__footer { display: flex; justify-content: space-between; margin-top: 10px; }
+
+/* WIDGETS - RIGHT COLUMN */
+.widgets {
+    flex: 0.3;
+    padding: 10px 20px;
+}
+.widgets__input {
+    display: flex;
+    align-items: center;
+    background-color: #e6ecf0;
+    padding: 10px;
+    border-radius: 20px;
+}
+.widgets__input input { border: none; background-color: transparent; outline: none; margin-left: 10px; }
+.widgets__widgetContainer { margin-top: 15px; background-color: #f7f9f9; padding: 20px; border-radius: 20px; }
+.follow__suggestion { display: flex; align-items: center; margin-top: 15px; }
+.follow__suggestion img { height: 40px; border-radius: 50%; }
+.follow__details { flex: 1; margin-left: 10px; }
+.follow__button { background-color: black; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-weight: 700; cursor: pointer; }
+
+/* --- MOBILE & TABLET OPTIMIZATION --- */
+
+/* 1. Tablet View (Screens smaller than 1024px) */
+@media (max-width: 1024px) {
+    .sidebar {
+        flex: 0.1;
+        min-width: 80px;
+        align-items: center;
+        padding: 10px 5px;
+    }
+
+    /* Hide text labels, keep only icons to save space */
+    .sidebarOption h2, 
+    .sidebar__tweet, 
+    .sidebar__profileInfo,
+    .sidebar__profile span:last-child {
+        display: none; 
+    }
+
+    .sidebarOption {
+        padding: 15px;
+        justify-content: center;
+    }
+}
+
+/* 2. Mobile Phone View (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    /* Hide the 3rd column (Widgets/Who to Follow) to focus on the feed */
+    .widgets {
+        display: none; 
+    }
+
+    /* Make the center feed take up the full remaining width */
+    .feed {
+        flex: 1; 
+        border-right: none;
+    }
+
+    /* Optional: Slightly reduce font sizes for mobile */
+    .feed__header h2 {
+        font-size: 18px;
+    }
+    
+    .tweetbox__input input {
+        font-size: 18px;
+    }
 }
