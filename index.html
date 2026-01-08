@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Twitter</title>
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!--sidebar starts-->
+   <div class="sidebar">
+      <i class="fab fa-twitter"></i>
+     
+      <div class="sidebarOption active">
+         <span class="material-symbols-outlined">home</span>
+         <h2>Home</h2>
+      </div>
+
+       <div class="sidebarOption">
+        <span class="material-symbols-outlined">search</span>
+         <h2>Explore</h2>
+      </div>
+
+       <div class="sidebarOption">
+       <span class="material-symbols-outlined">notifications</span>
+         <h2>Notification</h2>
+      </div>
+
+       <div class="sidebarOption">
+       <span class="material-symbols-outlined">mail</span>
+         <h2>Messages</h2>
+      </div>
+
+       <div class="sidebarOption">
+      <span class="material-symbols-outlined">bookmark</span>
+         <h2>Bookmarks</h2>
+      </div>
+
+       <div class="sidebarOption">
+         <span class="material-symbols-outlined">lists</span>
+         <h2>Lists</h2>
+      </div>
+
+       <div class="sidebarOption">
+         <span class="material-symbols-outlined">person</span>
+         <h2>Profile</h2>
+      </div>
+
+     
+       <div class="sidebarOption">
+        <span class="material-symbols-outlined">more_horiz</span> 
+         <h2>More</h2>
+      </div>
+      
+      <button class="sidebar-tweet">Tweet</button>
+
+   </div>
+   <!--sidebar ends-->
+
+   <!--feed starts-->
+   <div class="feed">
+      <div class="feed_header">
+         <H2>Home</H2>
+      </div>
+
+      <!--tweetbox starts-->
+      <div class="tweetbox">
+         <form>
+            <div class="tweetbox_input">
+               <img src="./profile.png" alt="">
+               <input type="text" placeholder="What's happening?">
+            </div>
+            <button class="tweetbox_tweetButton">Tweet</button>
+         </form>
+      </div>
+      <!--tweetbox ends-->
+
+      <!--post starts-->
+      <div class="post">
+         <div class="post_avatar">
+            <img src="/profile.png" alt="">
+         </div>
+
+         <div class="post_body">
+            <div class="post_header">
+               <div class="post_headerText">
+                  <h3>Neoentle Masemola
+                     <span class="post_headerSpecial">
+                      <span class="material-symbols-outlined post_badge">verified</span>@MrMasemola
+                     </span>
+                  </h3>
+               </div>
+               <div class="post_headerDescripition">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. dolore earum tempora id et animi?</p>
+               </div>
+            </div>
+         </div>
+         
+         <img src="/post image.jpg" alt="">
+     
+      </div>
+      <!--post ends-->
+   </div>
+   <!--feed ends-->
+</body>
+</html>
